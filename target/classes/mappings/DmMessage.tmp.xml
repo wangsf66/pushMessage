@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping-configuration>
+	 <table name="DM_MESSAGE" class="com.pushMessage.websocket.entity.DmMessage" strict="true">
+		<columns>
+		    <column name="ID"  dataType="string" length="36" validate="true" />
+			<column name="sender_id" property="senderId" description="发送人" dataType="string" length="36" nullable="false"  />	
+			<column name="receiver_id" property="receiverId" description="接收人"  dataType="string" length="36" nullable="false"  />
+			<column name="send_time" property="sendTime" description="发送时间"  dataType="datetime" nullable="false" />
+		    <column name="msg_type" property="msgType" description="消息类型" dataType="number" length="1" nullable="false" />
+		    <column name="state" property="state" description="消息状态" dataType="number" length="1" nullable="false" />
+		    <column name="content" property="content" description="sql内容"  dataType="clob" />
+		</columns>
+		<constraints>
+			<constraint type="PRIMARY_KEY">
+				<column name="ID" />
+			</constraint>
+		</constraints>
+	</table>
+</mapping-configuration>  
